@@ -1,5 +1,7 @@
 # zgenarena
 
+[![zgenarena - Docs](https://img.shields.io/badge/zgenarena-Docs-2ea44f)](https://eknkc.github.io/zgenarena/)
+
 `zgenarena` is a simple generational arena implementation.
 It allows for creating, removing, and reusing elements in an arena.
 It provides constant time insertion, lookup, and removal via indices that can be sized to fit the needs of the user.
