@@ -21,7 +21,7 @@ pub fn build(b: *std.Build) void {
 
     const install_docs = b.addInstallDirectory(.{
         .source_dir = tests.getEmittedDocs(),
-        .install_dir = .prefix,
+        .install_dir = .{ .custom = ".." },
         .install_subdir = "docs",
     });
 
