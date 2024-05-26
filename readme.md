@@ -6,6 +6,23 @@
 It allows for creating, removing, and reusing elements in an arena.
 It provides constant time insertion, lookup, and removal via indices that can be sized to fit the needs of the user.
 
+## Installation
+
+```sh
+zig fetch --save https://github.com/eknkc/zgenarena/archive/refs/heads/master.tar.gz
+```
+
+Add the following to your `build.zig`:
+
+```zig
+const zgenarena = b.dependency("zgenarena", .{
+    .target = target,
+    .optimize = optimize,
+});
+
+exe.root_module.addImport("zgenarena", zgenarena.module("zgenarena"));
+```
+
 ## Usage
 
 ```zig
