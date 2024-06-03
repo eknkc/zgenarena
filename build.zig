@@ -5,7 +5,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     _ = b.addModule("zgenarena", .{
-        .root_source_file = .{ .path = "src/arena.zig" },
+        .root_source_file = b.path("src/arena.zig"),
     });
 
     const tests = b.addTest(.{
